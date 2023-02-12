@@ -112,9 +112,11 @@ var input = document.querySelector('input[type="file"]')
 
 const upload=()=>{
 	const fileName=prompt("Enter file name");
+	const token=document.cookie.split(';').find(x=>x.includes('token'));
+	console.log(token)
 	fetch('/', {
 		method: 'POST',
-		body: {upStream: uploadStream, fileName:fileName}
+		body: {upStream: uploadStream, fileName:fileName,token:token}
 	  }).then((res)=>{
 		console.log(res)
 	  }).catch((err)=>console.log(err))
