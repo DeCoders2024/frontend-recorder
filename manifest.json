@@ -1,0 +1,11 @@
+{
+    "name": "Screen Recoder",
+    "version": "1.0.0",
+    "description": "record screen",
+    "manifest_version": 3,
+    "author": "Decoders",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "screen recorder"
+    }
+}
